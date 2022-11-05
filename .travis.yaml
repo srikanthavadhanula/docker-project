@@ -1,4 +1,4 @@
-sudo: require
+sudo: required
 services:
   - docker
 
@@ -15,8 +15,9 @@ deploy:
   secret_access_key:
     secure: "$SECRET_ACCESS_KEY"
   region: "ap-northeast-1"
-  app: "Dockerprodapp"
+  app: "dockerProdApp"
   env: "Dockerprodapp-env"
   bucket_name: "elasticbeanstalk-ap-northeast-1-631133471327"
+  bucket_path: "dockerProdApp"
   on:
     branch: main
